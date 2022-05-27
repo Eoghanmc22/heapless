@@ -27,7 +27,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     // AND not supported by the atomic-polyfill crate
     // see the `no-atomics.sh` / `no-cas.sh` script sitting next to this file
     match &target[..] {
-        "avr-unknown-gnu-atmega328"
+        "avr-unknown-unknown"
         | "bpfeb-unknown-none"
         | "bpfel-unknown-none"
         | "msp430-none-elf"
@@ -43,7 +43,7 @@ fn main() -> Result<(), Box<dyn Error>> {
     };
 
     match &target[..] {
-        "avr-unknown-gnu-atmega328"
+        "avr-unknown-unknown"
         | "msp430-none-elf"
         // | "riscv32i-unknown-none-elf"    // supported by atomic-polyfill
         // | "riscv32imc-unknown-none-elf"  // supported by atomic-polyfill
